@@ -1,60 +1,29 @@
 # Service Request Tracker
 
-A full-stack internal service desk prototype built with React + Vite, Flask REST APIs and SQLite.
+A full-stack internal IT Service Desk application built using React.js, Flask and SQLite.
 
-## Dashboard features
-- Summary cards for total, open, in-progress (pending), and resolved requests
-- Status breakdown donut chart and priority distribution bars
-- Create service requests with title, description and priority validation
-- Update request status from the requests table
-- Search by title/description and filter by status or priority
-- Responsive sidebar navigation and mobile-friendly layout
+## Features
+- Interactive dashboard with request statistics
+- Create and manage IT service requests
+- Priority-based request classification
+- Request status management
+- Search and filter functionality
+- Analytics dashboard with visual summaries
+- Persistent SQLite database storage
+- REST API integration
+- Automated backend tests using pytest
 
-## Requirements
-- Python 3.9+
-- Node.js 20.19+ (Node 22 is supported)
-- npm
+## Tech Stack
+**Frontend:** React.js, JavaScript, Vite, CSS
 
-## Run on Windows (VS Code)
+**Backend:** Python, Flask, Flask-CORS
 
-### 1. Backend
-Open a terminal in the project root:
+**Database:** SQLite
 
-```powershell
-cd backend
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-python app.py
-```
+**Testing:** Pytest
 
-The API runs at `http://127.0.0.1:5000`. Keep this terminal open.
-If PowerShell blocks activation, use Command Prompt and run `venv\Scripts\activate.bat`.
+## Getting Started
+See the project README for installation and execution instructions.
 
-### 2. Frontend
-Open a second terminal in VS Code:
-
-```powershell
-cd frontend
-npm install
-npm run dev
-```
-
-Open the Vite URL shown in the terminal, usually `http://localhost:5173`.
-
-### 3. Verify
-- API health: `http://127.0.0.1:5000/api/health`
-- Frontend: `http://localhost:5173`
-- Backend tests: from `backend`, activate `venv` and run `pytest -q`.
-
-## API
-- `GET /api/health`
-- `GET /api/requests`
-- `POST /api/requests`
-- `PATCH /api/requests/<id>`
-
-## Status meaning
-The dashboard's **Pending requests** summary counts records with status `In Progress`. The request workflow retains the API's existing statuses: `Open`, `In Progress`, and `Resolved`.
-
-## Notes
-This is a local prototype using SQLite. Authentication, authorization, audit history, deployment hardening and production WSGI serving are not implemented. Review and secure the application before production use.
+## Project Purpose
+The application demonstrates full-stack development, REST API integration, database management, request tracking and dashboard analytics.
